@@ -23,13 +23,83 @@
         }
 
         body {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--bg);
-        transition: background 0.5s ease, color 0.5s ease;
-        color: var(--text);
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--text);
+          position: relative;
+          overflow: hidden;
+
+          background: linear-gradient(
+            -45deg,
+            #0f172a,
+            #111c33,
+            #0b1220,
+            #1e293b
+          );
+          background-size: 400% 400%;
+          animation: gradientBG 15s ease infinite;
+        }
+
+        /* Animation du fond principal */
+        @keyframes gradientBG {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        /* Couche de lumière flottante */
+        body::before {
+          content: "";
+          position: absolute;
+          width: 600px;
+          height: 600px;
+          background: radial-gradient(
+            circle,
+            rgba(79, 195, 247, 0.25),
+            transparent 60%
+          );
+          top: -200px;
+          left: -200px;
+          animation: floatLight 12s ease-in-out infinite;
+          filter: blur(40px);
+        }
+
+        /* Deuxième lumière */
+        body::after {
+          content: "";
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(
+            circle,
+            rgba(0, 123, 255, 0.18),
+            transparent 60%
+          );
+          bottom: -150px;
+          right: -150px;
+          animation: floatLight2 14s ease-in-out infinite;
+          filter: blur(50px);
+        }
+
+        /* Animations des lumières */
+        @keyframes floatLight {
+          0% { transform: translate(0, 0); }
+          50% { transform: translate(120px, 80px); }
+          100% { transform: translate(0, 0); }
+        }
+
+        @keyframes floatLight2 {
+          0% { transform: translate(0, 0); }
+          50% { transform: translate(-100px, -60px); }
+          100% { transform: translate(0, 0); }
         }
 
         #loader.body {
@@ -170,7 +240,7 @@
     </div>
 
     <div class="container">
-        <h1>GPSERVICE</h1>
+        <h1>GP-SERVICES</h1>
         <a href="/login" class="btn-login">SE CONNECTER<i class="las la-angle-right"></i></a>
     </div>
 

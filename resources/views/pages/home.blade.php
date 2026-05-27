@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title') {{ 'Home' }} @endsection
+@section('title') {{ 'Accueil' }} @endsection
 @section('content')
 
-    @livewire('dash.stat-rh')
+    <h1>Accueil</h1>
 
 @endsection
 

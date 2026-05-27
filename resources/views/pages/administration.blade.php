@@ -1,15 +1,19 @@
 @extends('layouts.app')
-@section('title') {{ 'Avantages & Primes' }} @endsection
+@section('title') {{ 'Administration' }} @endsection
 @section('content')
 
     <nav class="breadcrumb">
         <ul>
-            <li><a href="{{ route('home') }}">Tableau de bord</a></li>
-            <li><a href="{{ route('benefits') }}">Avantages & Primes</a></li>
-            <li class="active">Attribution</li>
+            <li><a href="{{ route('home') }}">Accueil</a></li>
+            {{-- <li><a href="{{ route('home') }}">Test</a></li> --}}
+            <li class="active">Administration</li>
         </ul>
     </nav>
 
-    @livewire('benefit-employees', [$benefit_id])
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+        magni voluptatum consequatur ut molestias ullam quisquam minus eos veniam est quidem pariatur 
+        dolor placeat labore magnam ducimus atque enim? Delectus.
+    </p>
 
 @endsection

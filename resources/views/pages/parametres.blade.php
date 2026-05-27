@@ -9,6 +9,8 @@
         </ul>
     </nav>
 
-    @livewire('ui.tab-setting')
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis recusandae eos ipsum, facilis vitae consequuntur cum nesciunt. Cupiditate modi ipsa accusamus autem at asperiores quia natus molestiae quis cum?
+    </p>
 
 @endsection
