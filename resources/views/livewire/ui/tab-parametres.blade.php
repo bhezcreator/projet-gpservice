@@ -5,8 +5,8 @@
         <!-- MENU TABS -->
         <nav class="tabs-menu">
             <button
-                class="tabs-menu-item {{ $activeTab === 'profile' ? 'is-active' : '' }}"
-                wire:click="setTab('profile')"
+                class="tabs-menu-item {{ $activeTab === 'home' ? 'is-active' : '' }}"
+                wire:click="setTab('home')"
                 type="button"
             >
                 <i class="las la-user tabs-icon"></i>
@@ -19,23 +19,14 @@
                 type="button"
             >
                 <i class="las la-tasks tabs-icon"></i>
-                <span class="tabs-label">Roles</span>
-            </button>
-            
-            <button
-                class="tabs-menu-item {{ $activeTab === 'activites' ? 'is-active' : '' }}"
-                wire:click="setTab('activites')"
-                type="button"
-            >
-                <i class="la la-users"></i>
-                <span class="tabs-label">Activités</span>
+                <span class="tabs-label">Autres</span>
             </button>
         </nav>
 
         <!-- CONTENT -->
         <section class="tabs-content">
 
-            @if($activeTab === 'profile')
+            @if($activeTab === 'home')
                 <div class="tab-panel">
                     @livewire('profile')
                 </div>
@@ -43,15 +34,19 @@
 
             @if($activeTab === 'activites')
                 <div class="tab-panel">
-                    @livewire('activity-index')
+                    <p>
+                        Informations Société
+                        Paramètres Email
+                        SMS & Notifications
+                        Devise
+                        Langues
+                        Fuseaux Horaires
+                        Préférences
+                    </p>
                 </div>
             @endif
 
-            @if($activeTab === 'roles')
-                <div class="tab-panel">
-                    @livewire('roles-crud')
-                </div>
-            @endif
+
         </section>
 
     </div>

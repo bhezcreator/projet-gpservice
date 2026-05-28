@@ -3,24 +3,28 @@
         <i class="la la-home"></i> <span class="nav-cache-text">Accueil</span>
     </a>
 
+    <a href="{{ route('commerciale') }}" class="button {{ request()->routeIs('commerciale') ? 'active' : '' }}">
+        <i class="la la-users"></i>  <span class="nav-cache-text">commerciale</span>
+    </a>
+
+        <a href="{{ route('missions') }}" class="button {{ request()->routeIs('missions') ? 'active' : '' }}">
+        <i class="la la-sitemap"></i>  <span class="nav-cache-text">missions</span>
+    </a>
+
+        <a href="{{ route('interventions') }}" class="button {{ request()->routeIs('interventions') ? 'active' : '' }}">
+        <i class="la la-calendar-check"></i>  <span class="nav-cache-text">interventions</span>
+    </a>
+
+    <a href="{{ route('agents') }}" class="button {{ request()->routeIs('agents') ? 'active' : '' }}">
+        <i class="la la-users"></i>  <span class="nav-cache-text">Agents</span>
+    </a>
+
     <a href="{{ route('clients') }}" class="button {{ request()->routeIs('clients') ? 'active' : '' }}">
         <i class="la la-gift"></i>  <span class="nav-cache-text">clients</span>
     </a>
 
     <a href="{{ route('contrats') }}" class="button {{ request()->routeIs('contrats') ? 'active' : '' }}">
         <i class="la la-graduation-cap"></i>  <span class="nav-cache-text">contrats</span>
-    </a>
-
-    <a href="{{ route('commerciale') }}" class="button {{ request()->routeIs('commerciale') ? 'active' : '' }}">
-        <i class="la la-users"></i>  <span class="nav-cache-text">commerciale</span>
-    </a>
-
-    <a href="{{ route('missions') }}" class="button {{ request()->routeIs('missions') ? 'active' : '' }}">
-        <i class="la la-sitemap"></i>  <span class="nav-cache-text">missions</span>
-    </a>
-
-    <a href="{{ route('interventions') }}" class="button {{ request()->routeIs('interventions') ? 'active' : '' }}">
-        <i class="la la-calendar-check"></i>  <span class="nav-cache-text">interventions</span>
     </a>
 
     <a href="{{ route('finance') }}" class="button {{ request()->routeIs('finance') ? 'active' : '' }}">
@@ -32,7 +36,7 @@
     </a>
 
     <a href="{{ route('geolocalisation') }}" class="button {{ request()->routeIs('geolocalisation') ? 'active' : '' }}">
-        <i class="la la-clock"></i>  <span class="nav-cache-text">geolocalisation</span>
+        <i class="la la-clock"></i>  <span class="nav-cache-text">géolocalisation</span>
     </a>
 
         <a href="{{ route('communication') }}" class="button {{ request()->routeIs('communication') ? 'active' : '' }}">
@@ -54,8 +58,4 @@
         <a href="{{ route('parametres') }}" class="button {{ request()->routeIs('parametres') ? 'active' : '' }}">
         <i class="la la-clock"></i>  <span class="nav-cache-text">parametres</span>
     </a>
-{{-- 
-        <a href="{{ route('notifications') }}" class="button {{ request()->routeIs('notifications') ? 'active' : '' }}">
-        <i class="la la-clock"></i>  <span class="nav-cache-text">notifications</span>
-    </a> --}}
 </nav>

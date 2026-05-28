@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>GPS - @yield('title')</title>
+        <title>GP-SERVICES - @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Line Awesome -->
@@ -40,15 +40,15 @@
                     <i class="la la-moon"></i>
                 </button>
                 <!-- SETTINGS (lien) -->
-                <a href="{{ route('notifications') }}" class="icon-link" title="Paramètres">
+                <a href="{{ route('parametres') }}" class="icon-link" title="Paramètres">
                     <i class="la la-cog"></i>
                 </a>
 
                 <!-- NOTIFICATIONS -->
-                <div class="icon-wrapper">
+                <a href="{{ route('notifications') }}" class="icon-wrapper">
                     <i class="la la-bell"></i>
                     <span class="badge-noti">3</span>
-                </div>
+                </a>
 
                 <!-- USER MENU -->
                 <div class="user-menu" id="userMenu">
@@ -56,7 +56,7 @@
 
                     <div class="dropdown">
                         <strong>{{ auth()->user()->name }}</strong>
-                        {{-- <small>{{ auth()->user()->getRoleNames()->first() }}</small> --}}
+                        <small>{{ auth()->user()->getRoleNames()->first() }}</small>
 
                         <hr>
 

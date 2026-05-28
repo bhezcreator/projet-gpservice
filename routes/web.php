@@ -23,6 +23,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('pages.interventions');
     })->name('interventions');
 
+    Route::get('/agents', function () {
+        return view('pages.agent');
+    })->name('agents');
+
     Route::get('/clients', function () {
         return view('pages.clients');
     })->name('clients');

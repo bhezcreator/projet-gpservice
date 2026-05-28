@@ -13,13 +13,13 @@
     @if($employee)
         <!-- Header -->
         <div class="employee-header-ui">
-            <div class="employee-photo-ui">
+            {{-- <div class="employee-photo-ui">
                 @if($employee->getFirstMediaUrl('employees'))
                     <img src="{{ $employee->getFirstMediaUrl('employees') }}" alt="Photo de {{ $employee->first_name }}">
                 @else
                     <img src="https://placehold.co/150" alt="Photo par défaut">
                 @endif
-            </div>
+            </div> --}}
 
             <div class="employee-basic-ui">
                 <h1 class="employee-name-ui">{{ $employee->first_name }} {{ $employee->last_name }}</h1>
@@ -40,15 +40,6 @@
                 <div class="detail-item-ui"><span>Téléphone :</span> {{ $employee->phone }}</div>
                 <div class="detail-item-ui"><span>Email :</span> {{ $employee->email }}</div>
                 <div class="detail-item-ui"><span>Adresse :</span> {{ $employee->address }}</div>
-            </div>
-
-            <h2 class="details-section-title-ui">Informations professionnelles</h2>
-            <div class="details-grid-ui">
-                <div class="detail-item-ui"><span>Type :</span> {{ $employee->type }}</div>
-                <div class="detail-item-ui"><span>Département :</span> {{ $employee->department->name ?? '-' }}</div>
-                <div class="detail-item-ui"><span>Poste :</span> {{ $employee->position->title ?? '-' }}</div>
-                <div class="detail-item-ui"><span>Supérieur :</span> {{ optional($employee->supervisor)->first_name ?: '-' }}</div>
-                <div class="detail-item-ui"><span>Date d'embauche :</span> {{ $employee->hire_date }}</div>
             </div>
         </div>
 

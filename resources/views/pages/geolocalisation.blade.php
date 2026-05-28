@@ -9,10 +9,6 @@
         </ul>
     </nav>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        magni voluptatum consequatur ut molestias ullam quisquam minus eos veniam est quidem pariatur 
-        dolor placeat labore magnam ducimus atque enim? Delectus.
-    </p>
+@livewire('ui.tab-geolocalisation')
 
 @endsection
